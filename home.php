@@ -22,13 +22,12 @@
     $d = null; //nulo
     $teste = false; //bool 
     
-    //constante
+    //Constantes:
     
     define(constant_name: "minha_const", value: "teste");
     const TESTE = "valor";
 
-
-    //escrevendo na tela
+    //Escrevendo na tela:
     
     echo "\t<p>O valor de \$a é " . $b . "</p>\n";
     echo "\t<p>O valor de b é $a</p>\n";
@@ -47,13 +46,15 @@
     <h2>Estruturas de Decisão</h2>
     <h3>IF</h3>
     <?php
-    if ($a > $b) {
+    if ($a > $b) 
+    {
         echo "\t<p>Deu verdadeiro<p/>";
-    } elseif ($a == $c && $b < $c) {
+    } elseif ($a == $c && $b < $c) 
+    {
         echo "\t<p> A igual a C</p>";
     }
     ?>
-    <h3>SWITCH</h3>
+    <h3>Switch</h3>
     <?php
     $a = "5";
     switch ($a) {
@@ -82,12 +83,11 @@
     }
     ?>
     <h2>Estruturas de Repetição</h2>
-
     <h3>Do while</h3>
     <?php
     $i = 0;
-
-    do {
+    do 
+    {
         echo "\t<p>O valor de \$i é $i</p>\n";
         $i++;
     } while ($i <= 2);
@@ -96,7 +96,8 @@
     <h2>While</h2>
     <?php
     $i = 0;
-    while ($i <= 2) {
+    while ($i <= 2) 
+    {
         echo "\t<p>O valor de \$i é $i</p>\n";
         $i++;
     }
@@ -104,7 +105,8 @@
 
     <h2>For</h2>
     <?php
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 0; $i <= 2; $i++) 
+    {
         echo "\t<p>O valor de \$i é $i</p>\n";
     }
     ?>
@@ -116,7 +118,8 @@
     $vet2[] = "Itu";
     array_push($vet, "SP", "1599758616");
 
-    foreach ($vet as $value) {
+    foreach ($vet as $value) 
+    {
         echo "\t<p>O valor atual é $value</p>\n";
     }
     ?>
@@ -124,7 +127,8 @@
     <h2>For com vetor indexado</h2>
     <?php
 
-    for ($i = 0; $i < count($vet2); $i++) {
+    for ($i = 0; $i < count($vet2); $i++) 
+    {
         echo "\t<p>O valor da posição " . $i + 1 . "º do vetor \$vet2 é {$vet2[$i]}</p>\n";
     }
     ?>
@@ -132,7 +136,8 @@
     <h2>Foreach com vetor associativo</h2>
     <?php
     $vet_assoc = ["id" => "1", "nome" => "Tião", "telefone" => "15997586816"];
-    foreach ($vet_assoc as $key => $value) {
+    foreach ($vet_assoc as $key => $value) 
+    {
         echo "\t<p>O valor da $key º do vetor \$vet_assoc é $value</p>\n";
     }
     echo "\t<p>Valor avulso de \$vet_assoc é {$vet_assoc["nome"]}</p>\n";
@@ -155,31 +160,36 @@
     ];
      echo "\t<p>Valor avulso de \$cars é {$cars["1"]["1"]}</p>\n";
 
-     for ($i=0; $i < count($cars); $i++) { 
+     for ($i=0; $i < count($cars); $i++) 
+     { 
       if (is_array($cars[$i])) 
-        for ($j=0; $j < count($cars[$i]); $j++) { 
+        for ($j=0; $j < count($cars[$i]); $j++)
+        { 
              echo "\t<p>O valor da posição $j do vetor \$cars na posição \$j é {$cars[$i][$j]}</p>\n";
         } 
-        else {
+        else 
+        {
             echo "\t<p>O valor da posição $i do vetor \$cars é {$cars[$i]}</p>\n";
-     }
-       } 
+        }
+    } 
     ?>
 
-    //VETOR bidmencional
+    //vetor bidmencional
 
     <script src="js/bootstrap.bundle.js"></script>
 
 </body>
 
-</html>        echo "\t<p>O valor de \$i é $i</p>\n";
-        $i++;
+</html>        
+    echo "\t<p>O valor de \$i é $i</p>\n";
+    $i++;
     }
     ?>
 
     <h2>For</h2>
     <?php
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 0; $i <= 2; $i++) 
+    {
         echo "\t<p>O valor de \$i é $i</p>\n";
     }
     ?>
@@ -190,7 +200,8 @@
     $vet2 = array("Zeca", "Pedreiro", "15998554984", 123);
     $vet2[] = "Itu";
 
-    foreach ($vet as $value) {
+    foreach ($vet as $value) 
+    {
         echo "\t<p>O valor atual é $value</p>\n";
     }
     ?>
@@ -198,7 +209,8 @@
     <h2>For com vetor indexado</h2>
     <?php
 
-    for ($i = 0; $i < count($vet2); $i++) {
+    for ($i = 0; $i < count($vet2); $i++) 
+    {
         echo "\t<p>O valor da posição " . $i + 1 . "º do vetor \$vet2 é {$vet2[$i]}</p>\n";
     }
     ?>
@@ -206,7 +218,8 @@
     <h2>Foreach com vetor associativo</h2>
     <?php
     $vet_assoc = ["id" => "1", "nome" => "Tião", "telefone" => "15997586816"];
-    foreach ($vet_assoc as $key => $value) {
+    foreach ($vet_assoc as $key => $value) 
+    {
         echo "\t<p>O valor da $key º do vetor \$vet_assoc é $value</p>\n";
     }
     echo "\t<p>Valor avulso de \$vet_assoc é {$vet_assoc["nome"]}</p>\n";
@@ -215,7 +228,8 @@
     <h2>Foreach com vetor bidmencional</h2>
     <?php
     $vet_assoc = ["id" => "1", "nome" => "Tião", "telefone" => "15997586816"];
-    foreach ($vet_assoc as $key => $value) {
+    foreach ($vet_assoc as $key => $value) 
+    {
         echo "\t<p>O valor da $key º do vetor \$vet_assoc é $value</p>\n";
     }
     echo "\t<p>Valor avulso de \$vet_assoc é {$vet_assoc["nome"]}</p>\n";
