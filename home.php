@@ -82,6 +82,63 @@
             i++;
         } while($i <= 10);
     ?>
+
+    
+    <h2>WHILE</h2>
+    <?php
+    $i = 0;
+    while ($i <= 2) {
+        echo "\t<p>O valor de \$i é $i</p>\n";
+        $i++;
+    }
+    ?>
+
+    <h2>For</h2>
+    <?php
+    for ($i = 0; $i <= 2; $i++) {
+        echo "\t<p>O valor de \$i é $i</p>\n";
+    }
+    ?>
+
+    <h2>Foreach</h2>
+    <?php
+    $vet = ["Zeca", "Pedreiro", "15998554984"];
+    $vet2 = array("Zeca", "Pedreiro", "15998554984", 123);
+    $vet2[] = "Itu";
+
+    foreach ($vet as $value) {
+        echo "\t<p>O valor atual é $value</p>\n";
+    }
+    ?>
+
+    <h2>For com vetor indexado</h2>
+    <?php
+
+    for ($i = 0; $i < count($vet2); $i++) {
+        echo "\t<p>O valor da posição " . $i + 1 . "º do vetor \$vet2 é {$vet2[$i]}</p>\n";
+    }
+    ?>
+
+    <h2>Foreach com vetor associativo</h2>
+    <?php
+    $vet_assoc = ["id" => "1", "nome" => "Tião", "telefone" => "15997586816"];
+    foreach ($vet_assoc as $key => $value) {
+        echo "\t<p>O valor da $key º do vetor \$vet_assoc é $value</p>\n";
+    }
+    echo "\t<p>Valor avulso de \$vet_assoc é {$vet_assoc["nome"]}</p>\n";
+    ?>
+
+    <h2>Foreach com vetor bidmencional</h2>
+    <?php
+    $vet_assoc = ["id" => "1", "nome" => "Tião", "telefone" => "15997586816"];
+    foreach ($vet_assoc as $key => $value) {
+        echo "\t<p>O valor da $key º do vetor \$vet_assoc é $value</p>\n";
+    }
+    echo "\t<p>Valor avulso de \$vet_assoc é {$vet_assoc["nome"]}</p>\n";
+    ?>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    //CLASSES
 </body>
 
 </html>
